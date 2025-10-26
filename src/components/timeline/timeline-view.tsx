@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PlusCircle } from "lucide-react";
+import { PlusCircle, Trash2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EditableTimelinePoint } from "./points/editable-timeline-point";
 import { useTimelineStore } from "@/lib/store/use-timeline-store";
@@ -60,6 +60,7 @@ export function TimelineView({ timelineId }: { timelineId: string }) {
                                 id={point.id}
                                 content={point.content}
                                 onUpdate={handleUpdatePoint}
+                                timelineId={timeline.id}
                             />
                         ))}
                     </div>
